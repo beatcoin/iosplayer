@@ -12,13 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString * fID=@"4090306869204649000";
-    
-    NSLog(@"getplay result=%@", fID);
-    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber * myNumber = [f numberFromString:fID];
-    NSLog(@"getplay end");
+ 
     
     // Override point for customization after application launch.
     return YES;

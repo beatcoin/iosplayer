@@ -60,7 +60,10 @@
     for (NSDictionary * item in items) {
        // NSString* fID
         
-        NSNumber * myNumber = [item  objectForKey:@"file_identifier"];
+        unsigned long long ullvalue = strtoull([[item  objectForKey:@"file_identifier"] UTF8String], NULL, 0);
+        NSNumber * myNumber = [[NSNumber alloc] initWithUnsignedLongLong:ullvalue];
+
+        
         /*
         NSLog(@"getplay result=%@ %@", fID, [fID class]);
         NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
@@ -79,6 +82,38 @@
     return nil;
 }
 
++(NSString *) getPlayByName {
+    
+    
+    NSString * url=ENGINE_URL;
+    url=[url stringByAppendingString:@"/jukebox/526c1ed6eb63e7ebe22dabe6/play/"];
+    
+    NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:url] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    NSDictionary * results = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
+    if (error) NSLog(@"[%@ %@] JSON error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), error.localizedDescription);
+    
+    NSLog(@"getPlay: %@",results);
+    
+    NSArray *items = [results objectForKey:@"items"];
+    //  NSMutableArray * NSNumbers = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary * item in items) {
+        // NSString* fID
+        
+        
+        NSDictionary *meta = [item objectForKey:@"meta"];
+
+        
+        return [meta  objectForKey:@"title"];
+        
+        
+            //  [NSNumbers addObject:myNumber];
+    }
+    return nil;
+}
+
+
 + (void) printItem:(id)object {
     NSLog(@"Title: %@", [object valueForProperty: MPMediaItemPropertyTitle]);
     NSLog(@"Artist: %@", [object valueForProperty: MPMediaItemPropertyArtist]);
@@ -95,7 +130,10 @@
     for (id object in songs.items) {
     //    [self printItem:object];
         NSMutableDictionary *file_identifier = [[NSMutableDictionary alloc] init];
-        [file_identifier setObject:[object valueForProperty: MPMediaItemPropertyPersistentID] forKey:@"file_identifier"];
+        
+        NSString * persistentID = [[[object representativeItem] valueForProperty:MPMediaItemPropertyPersistentID] stringValue];
+       // NSLog(@"%@ %@" ,persistentID, [persistentID class]);
+        [file_identifier setObject:persistentID forKey:@"file_identifier"];
         
         NSMutableDictionary *meta = [[NSMutableDictionary alloc] init];
         [meta setObject:[object valueForProperty: MPMediaItemPropertyTitle] forKey:@"title"];

@@ -32,21 +32,23 @@
 	// Do any additional setup after loading the view, typically from a nib.
     musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
     musicPlayer.repeatMode=MPMusicRepeatModeNone;
+    musicPlayer.shuffleMode = MPMusicShuffleModeOff;
     
     [musicPlayer stop];
     
+    /*
+    
     MPMediaQuery *songsQuery = [MPMediaQuery songsQuery];
     [self.musicPlayer setQueueWithQuery:songsQuery];
+    */
+    
     [self createTimer];
     [self registerMediaPlayerNotifications];
     
     
     MPMediaQuery *songQuery = [MPMediaQuery songsQuery];
-    
     NSArray *songs = [songQuery items];
-    
     MPMediaItemCollection *currentQueue = [[MPMediaItemCollection alloc] initWithItems:songs];
-    
     [beatcoinAPI postLibrary:currentQueue];
     
     
@@ -113,101 +115,83 @@
     
     if (playbackState == MPMusicPlaybackStatePaused) {
         NSLog(@"handle_PlaybackStateChanged: MPMusicPlaybackStatePaused");
+        playingASong=FALSE;
+
     } else if (playbackState == MPMusicPlaybackStatePlaying) {
         NSLog(@"musicPlayer.nowPlayingItem=");
         NSLog(@"indexOfNowPlayingItem=%lu",(unsigned long)musicPlayer.indexOfNowPlayingItem);
         [self printItem:musicPlayer.nowPlayingItem];
     } else if (playbackState == MPMusicPlaybackStateStopped) {
         NSLog (@"handle_PlaybackStateChanged: MPMusicPlaybackStateStopped");
-        [musicPlayer stop];
+       // [musicPlayer stop];
+        playingASong=FALSE;
+
     }
 }
 
 
 - (void) fetchAndPlaySong {
     
-    
+    /*
     MPMediaPropertyPredicate *predicate =
     [MPMediaPropertyPredicate predicateWithValue: @"Non_Existant_Song_Name"
                                      forProperty: MPMediaItemPropertyTitle];
     MPMediaQuery *q = [[MPMediaQuery alloc] init];
     [q addFilterPredicate: predicate];
     [musicPlayer setQueueWithQuery:q];
-    musicPlayer.nowPlayingItem = nil;
-    [musicPlayer stop];
+    */
+    
+   // musicPlayer.nowPlayingItem = nil;
+  //  [musicPlayer stop];
  
-    NSNumber * a=[beatcoinAPI getPlay];
+   // NSNumber * a=[beatcoinAPI getPlay];
+    
+    NSString * a=[beatcoinAPI getPlayByName];
     
     if (a==nil) return;
     
-    MPMediaQuery *songQuery = [MPMediaQuery songsQuery];
    
     MPMediaQuery *songsQuery = [MPMediaQuery songsQuery];
-    
+
+    /*
     [self.musicPlayer setQueueWithQuery:songsQuery];
+    
+    MPMediaQuery *mq  = [[MPMediaQuery alloc] init]; //[MPMediaQuery songsQuery];
+    
+  
+    MPMediaPropertyPredicate *songNamePredicate = [MPMediaPropertyPredicate
+                                                   predicateWithValue:a
+
+                                                   forProperty:MPMediaItemPropertyPersistentID];
+    
+    
+    [mq addFilterPredicate:songNamePredicate];
+
+    NSLog(@"[mq items]:%@ [mq items] %@",[mq items],[[mq items] class]);
+
+    [musicPlayer setQueueWithQuery:mq];
+    
+    for (a in [mq items]) {
+        NSLog(@"%@",a);
+    }
+    */
     
     MPMediaQuery *mq  = [MPMediaQuery songsQuery];
     MPMediaPropertyPredicate *songNamePredicate = [MPMediaPropertyPredicate
                                                    predicateWithValue:a
-                                                   forProperty:MPMediaItemPropertyPersistentID];
-    
-    
-    
+                                                   forProperty:MPMediaItemPropertyTitle];
     [mq addFilterPredicate:songNamePredicate];
     [musicPlayer setQueueWithQuery:mq];
+    //[mp play];
+    for (a in [mq items]) {
+        NSLog(@"%@",a);
+    }
+    
     [musicPlayer play];
+
     playingASong=TRUE;
     
-    
-    /*
-     [musicPlayer stop];
-     
-     //[musicPlayer setQueueWithItemCollection: currentQueue];
-     
-     [musicPlayer skipToBeginning];
-     if (a) {
-     
-     
-     NSLog(@"print current collection du play");
-     int i=0;
-     int songInPlaylist=0;
-     BOOL foundSong=FALSE;
-     
-     for (id object in songsQuery.items) {
-     
-     NSLog(@"PersistentID: %@/%@", [object valueForProperty: MPMediaItemPropertyPersistentID],a);
-     if ([[object valueForProperty: MPMediaItemPropertyPersistentID] isEqualToNumber:a]) {
-     
-     //if ([object valueForProperty: MPMediaItemPropertyPersistentID]==a) {
-     [self printItem:object];
-     songInPlaylist=i;
-     //  musicPlayer.nowPlayingItem=object;
-     //[musicPlayer skipToPreviousItem];
-     
-     foundSong=TRUE;
-     //break;
-     //  musicPlayer.p
-     
-     } else {
-     if (foundSong==FALSE) {
-     [musicPlayer skipToNextItem];
-     NSLog(@"skipToNextItem:");
-     
-     }
-     }
-     i++;
-     
-     }
-     NSLog(@"playing a fetched song !");
-     playingASong=TRUE;
-     [musicPlayer play];
-     
-     
-     } else {
-     NSLog(@"current queue empty: stop playing songs.");
-     playingASong=FALSE;
-     }
-     */
+
     NSLog(@"playing a fetched song !");
     
 }

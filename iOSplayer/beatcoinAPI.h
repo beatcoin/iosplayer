@@ -15,6 +15,7 @@
 
 +(NSNumber *) getPlay;
 //+(NSArray *) getPlay;
++(NSString *) getPlayByName;
 
 +(void) postLibrary:(MPMediaItemCollection *)songs;
 
