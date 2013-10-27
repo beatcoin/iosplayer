@@ -25,6 +25,7 @@
 		9548E112181C053600AEC126 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E111181C053600AEC126 /* MediaPlayer.framework */; };
 		95E9EC69181C290000462558 /* beatcoinAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E9EC68181C290000462558 /* beatcoinAPI.m */; };
 		95E9EC6B181C85A000462558 /* Default-586h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E9EC6A181C85A000462558 /* Default-586h@2x.png */; };
+		95E9EC6D181D042500462558 /* iPhoneIcon_Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E9EC6C181D042500462558 /* iPhoneIcon_Big.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		95E9EC67181C290000462558 /* beatcoinAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beatcoinAPI.h; sourceTree = "<group>"; };
 		95E9EC68181C290000462558 /* beatcoinAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beatcoinAPI.m; sourceTree = "<group>"; };
 		95E9EC6A181C85A000462558 /* Default-586h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-586h@2x.png"; sourceTree = "<group>"; };
+		95E9EC6C181D042500462558 /* iPhoneIcon_Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneIcon_Big.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		9548E0E0181BF9B600AEC126 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95E9EC6C181D042500462558 /* iPhoneIcon_Big.png */,
 				95E9EC6A181C85A000462558 /* Default-586h@2x.png */,
 				9548E0E1181BF9B600AEC126 /* iOSplayer-Info.plist */,
 				9548E0E2181BF9B600AEC126 /* InfoPlist.strings */,
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E9EC6D181D042500462558 /* iPhoneIcon_Big.png in Resources */,
 				9548E0F0181BF9B600AEC126 /* Main_iPad.storyboard in Resources */,
 				9548E0F5181BF9B600AEC126 /* Images.xcassets in Resources */,
 				9548E0ED181BF9B600AEC126 /* Main_iPhone.storyboard in Resources */,
@@ -408,7 +412,6 @@
 		9548E10C181BF9B600AEC126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -424,7 +427,6 @@
 		9548E10D181BF9B600AEC126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
