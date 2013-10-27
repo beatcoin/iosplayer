@@ -33,7 +33,8 @@
     musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
     musicPlayer.repeatMode=MPMusicRepeatModeNone;
     musicPlayer.shuffleMode = MPMusicShuffleModeOff;
-    
+    _statusLine.text=@"waiting for song";
+
     [musicPlayer stop];
     
     /*
@@ -91,20 +92,25 @@
     
     MPMediaItem *currentItem = [musicPlayer nowPlayingItem];
     NSLog(@"handle_NowPlayingItemChanged:");
+    
     [self printItem:musicPlayer.nowPlayingItem];
     
+    
+    /*
     NSString *titleString = [currentItem valueForProperty:MPMediaItemPropertyTitle];
     if (titleString) {
         playingLabel.text = [NSString stringWithFormat:@"Title: %@",titleString];
     } else {
         playingLabel.text = @"Title: Unknown title";
     }
+     */
     
     if ([currentItem valueForProperty: MPMediaItemPropertyPersistentID]==nil ) {
         
         playingASong=FALSE;
         NSLog(@"no song played");
-        
+        _statusLine.text=@"waiting for song";
+
     }
 }
 
@@ -115,16 +121,26 @@
     
     if (playbackState == MPMusicPlaybackStatePaused) {
         NSLog(@"handle_PlaybackStateChanged: MPMusicPlaybackStatePaused");
-        playingASong=FALSE;
+       // playingASong=FALSE;
 
     } else if (playbackState == MPMusicPlaybackStatePlaying) {
         NSLog(@"musicPlayer.nowPlayingItem=");
         NSLog(@"indexOfNowPlayingItem=%lu",(unsigned long)musicPlayer.indexOfNowPlayingItem);
+        NSString *status = @"playing ";
+        NSString *status2=[status stringByAppendingString:[musicPlayer.nowPlayingItem valueForProperty: MPMediaItemPropertyTitle]];
+        status =[musicPlayer.nowPlayingItem valueForProperty: MPMediaItemPropertyArtist];
+        _statusLine.text= [NSString stringWithFormat:@"%@ %@", status2, status];
+        
+
+        
+
         [self printItem:musicPlayer.nowPlayingItem];
     } else if (playbackState == MPMusicPlaybackStateStopped) {
         NSLog (@"handle_PlaybackStateChanged: MPMusicPlaybackStateStopped");
        // [musicPlayer stop];
-        playingASong=FALSE;
+       // playingASong=FALSE;
+       // _statusLine.text=@"waiting for song";
+
 
     }
 }

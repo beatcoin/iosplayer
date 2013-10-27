@@ -11,7 +11,9 @@
 
 @interface beatcoinViewController : UIViewController <MPMediaPickerControllerDelegate> {
     MPMusicPlayerController *musicPlayer;
-    IBOutlet UIButton *addSongsButton;
+    
+    __weak IBOutlet UILabel *_statusLine;
+    
 }
 
 @property (nonatomic, retain) MPMusicPlayerController *musicPlayer;
