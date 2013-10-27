@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9548E0DA181BF9B600AEC126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0D9181BF9B600AEC126 /* Foundation.framework */; };
+		9548E0DC181BF9B600AEC126 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0DB181BF9B600AEC126 /* CoreGraphics.framework */; };
+		9548E0DE181BF9B600AEC126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0DD181BF9B600AEC126 /* UIKit.framework */; };
+		9548E0E4181BF9B600AEC126 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9548E0E2181BF9B600AEC126 /* InfoPlist.strings */; };
+		9548E0E6181BF9B600AEC126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548E0E5181BF9B600AEC126 /* main.m */; };
+		9548E0EA181BF9B600AEC126 /* beatcoinAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548E0E9181BF9B600AEC126 /* beatcoinAppDelegate.m */; };
+		9548E0ED181BF9B600AEC126 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9548E0EB181BF9B600AEC126 /* Main_iPhone.storyboard */; };
+		9548E0F0181BF9B600AEC126 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9548E0EE181BF9B600AEC126 /* Main_iPad.storyboard */; };
+		9548E0F3181BF9B600AEC126 /* beatcoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548E0F2181BF9B600AEC126 /* beatcoinViewController.m */; };
+		9548E0F5181BF9B600AEC126 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9548E0F4181BF9B600AEC126 /* Images.xcassets */; };
+		9548E0FC181BF9B600AEC126 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0FB181BF9B600AEC126 /* XCTest.framework */; };
+		9548E0FD181BF9B600AEC126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0D9181BF9B600AEC126 /* Foundation.framework */; };
+		9548E0FE181BF9B600AEC126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E0DD181BF9B600AEC126 /* UIKit.framework */; };
+		9548E106181BF9B600AEC126 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9548E104181BF9B600AEC126 /* InfoPlist.strings */; };
+		9548E108181BF9B600AEC126 /* iOSplayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9548E107181BF9B600AEC126 /* iOSplayerTests.m */; };
+		9548E112181C053600AEC126 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9548E111181C053600AEC126 /* MediaPlayer.framework */; };
+		95E9EC69181C290000462558 /* beatcoinAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E9EC68181C290000462558 /* beatcoinAPI.m */; };
+		95E9EC6B181C85A000462558 /* Default-586h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E9EC6A181C85A000462558 /* Default-586h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9548E0FF181BF9B600AEC126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9548E0CE181BF9B600AEC126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9548E0D5181BF9B600AEC126;
+			remoteInfo = iOSplayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9548E0D6181BF9B600AEC126 /* iOSplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9548E0D9181BF9B600AEC126 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9548E0DB181BF9B600AEC126 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9548E0DD181BF9B600AEC126 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9548E0E1181BF9B600AEC126 /* iOSplayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSplayer-Info.plist"; sourceTree = "<group>"; };
+		9548E0E3181BF9B600AEC126 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9548E0E5181BF9B600AEC126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9548E0E7181BF9B600AEC126 /* iOSplayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSplayer-Prefix.pch"; sourceTree = "<group>"; };
+		9548E0E8181BF9B600AEC126 /* beatcoinAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = beatcoinAppDelegate.h; sourceTree = "<group>"; };
+		9548E0E9181BF9B600AEC126 /* beatcoinAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beatcoinAppDelegate.m; sourceTree = "<group>"; };
+		9548E0EC181BF9B600AEC126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		9548E0EF181BF9B600AEC126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		9548E0F1181BF9B600AEC126 /* beatcoinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = beatcoinViewController.h; sourceTree = "<group>"; };
+		9548E0F2181BF9B600AEC126 /* beatcoinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beatcoinViewController.m; sourceTree = "<group>"; };
+		9548E0F4181BF9B600AEC126 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9548E0FA181BF9B600AEC126 /* iOSplayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSplayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9548E0FB181BF9B600AEC126 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9548E103181BF9B600AEC126 /* iOSplayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSplayerTests-Info.plist"; sourceTree = "<group>"; };
+		9548E105181BF9B600AEC126 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9548E107181BF9B600AEC126 /* iOSplayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSplayerTests.m; sourceTree = "<group>"; };
+		9548E111181C053600AEC126 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		95E9EC67181C290000462558 /* beatcoinAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beatcoinAPI.h; sourceTree = "<group>"; };
+		95E9EC68181C290000462558 /* beatcoinAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beatcoinAPI.m; sourceTree = "<group>"; };
+		95E9EC6A181C85A000462558 /* Default-586h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-586h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9548E0D3181BF9B600AEC126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E112181C053600AEC126 /* MediaPlayer.framework in Frameworks */,
+				9548E0DC181BF9B600AEC126 /* CoreGraphics.framework in Frameworks */,
+				9548E0DE181BF9B600AEC126 /* UIKit.framework in Frameworks */,
+				9548E0DA181BF9B600AEC126 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9548E0F7181BF9B600AEC126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E0FC181BF9B600AEC126 /* XCTest.framework in Frameworks */,
+				9548E0FE181BF9B600AEC126 /* UIKit.framework in Frameworks */,
+				9548E0FD181BF9B600AEC126 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9548E0CD181BF9B600AEC126 = {
+			isa = PBXGroup;
+			children = (
+				9548E0DF181BF9B600AEC126 /* iOSplayer */,
+				9548E101181BF9B600AEC126 /* iOSplayerTests */,
+				9548E0D8181BF9B600AEC126 /* Frameworks */,
+				9548E0D7181BF9B600AEC126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9548E0D7181BF9B600AEC126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9548E0D6181BF9B600AEC126 /* iOSplayer.app */,
+				9548E0FA181BF9B600AEC126 /* iOSplayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9548E0D8181BF9B600AEC126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9548E111181C053600AEC126 /* MediaPlayer.framework */,
+				9548E0D9181BF9B600AEC126 /* Foundation.framework */,
+				9548E0DB181BF9B600AEC126 /* CoreGraphics.framework */,
+				9548E0DD181BF9B600AEC126 /* UIKit.framework */,
+				9548E0FB181BF9B600AEC126 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9548E0DF181BF9B600AEC126 /* iOSplayer */ = {
+			isa = PBXGroup;
+			children = (
+				9548E0E8181BF9B600AEC126 /* beatcoinAppDelegate.h */,
+				9548E0E9181BF9B600AEC126 /* beatcoinAppDelegate.m */,
+				9548E0EB181BF9B600AEC126 /* Main_iPhone.storyboard */,
+				9548E0EE181BF9B600AEC126 /* Main_iPad.storyboard */,
+				95E9EC67181C290000462558 /* beatcoinAPI.h */,
+				95E9EC68181C290000462558 /* beatcoinAPI.m */,
+				9548E0F1181BF9B600AEC126 /* beatcoinViewController.h */,
+				9548E0F2181BF9B600AEC126 /* beatcoinViewController.m */,
+				9548E0F4181BF9B600AEC126 /* Images.xcassets */,
+				9548E0E0181BF9B600AEC126 /* Supporting Files */,
+			);
+			path = iOSplayer;
+			sourceTree = "<group>";
+		};
+		9548E0E0181BF9B600AEC126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95E9EC6A181C85A000462558 /* Default-586h@2x.png */,
+				9548E0E1181BF9B600AEC126 /* iOSplayer-Info.plist */,
+				9548E0E2181BF9B600AEC126 /* InfoPlist.strings */,
+				9548E0E5181BF9B600AEC126 /* main.m */,
+				9548E0E7181BF9B600AEC126 /* iOSplayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9548E101181BF9B600AEC126 /* iOSplayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9548E107181BF9B600AEC126 /* iOSplayerTests.m */,
+				9548E102181BF9B600AEC126 /* Supporting Files */,
+			);
+			path = iOSplayerTests;
+			sourceTree = "<group>";
+		};
+		9548E102181BF9B600AEC126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9548E103181BF9B600AEC126 /* iOSplayerTests-Info.plist */,
+				9548E104181BF9B600AEC126 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9548E0D5181BF9B600AEC126 /* iOSplayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9548E10B181BF9B600AEC126 /* Build configuration list for PBXNativeTarget "iOSplayer" */;
+			buildPhases = (
+				9548E0D2181BF9B600AEC126 /* Sources */,
+				9548E0D3181BF9B600AEC126 /* Frameworks */,
+				9548E0D4181BF9B600AEC126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSplayer;
+			productName = iOSplayer;
+			productReference = 9548E0D6181BF9B600AEC126 /* iOSplayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9548E0F9181BF9B600AEC126 /* iOSplayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9548E10E181BF9B600AEC126 /* Build configuration list for PBXNativeTarget "iOSplayerTests" */;
+			buildPhases = (
+				9548E0F6181BF9B600AEC126 /* Sources */,
+				9548E0F7181BF9B600AEC126 /* Frameworks */,
+				9548E0F8181BF9B600AEC126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9548E100181BF9B600AEC126 /* PBXTargetDependency */,
+			);
+			name = iOSplayerTests;
+			productName = iOSplayerTests;
+			productReference = 9548E0FA181BF9B600AEC126 /* iOSplayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9548E0CE181BF9B600AEC126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = beatcoin;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = franck;
+				TargetAttributes = {
+					9548E0D5181BF9B600AEC126 = {
+						DevelopmentTeam = MRZZE7N3B9;
+					};
+					9548E0F9181BF9B600AEC126 = {
+						TestTargetID = 9548E0D5181BF9B600AEC126;
+					};
+				};
+			};
+			buildConfigurationList = 9548E0D1181BF9B600AEC126 /* Build configuration list for PBXProject "iOSplayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9548E0CD181BF9B600AEC126;
+			productRefGroup = 9548E0D7181BF9B600AEC126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9548E0D5181BF9B600AEC126 /* iOSplayer */,
+				9548E0F9181BF9B600AEC126 /* iOSplayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9548E0D4181BF9B600AEC126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E0F0181BF9B600AEC126 /* Main_iPad.storyboard in Resources */,
+				9548E0F5181BF9B600AEC126 /* Images.xcassets in Resources */,
+				9548E0ED181BF9B600AEC126 /* Main_iPhone.storyboard in Resources */,
+				95E9EC6B181C85A000462558 /* Default-586h@2x.png in Resources */,
+				9548E0E4181BF9B600AEC126 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9548E0F8181BF9B600AEC126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E106181BF9B600AEC126 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9548E0D2181BF9B600AEC126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E0F3181BF9B600AEC126 /* beatcoinViewController.m in Sources */,
+				9548E0E6181BF9B600AEC126 /* main.m in Sources */,
+				9548E0EA181BF9B600AEC126 /* beatcoinAppDelegate.m in Sources */,
+				95E9EC69181C290000462558 /* beatcoinAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9548E0F6181BF9B600AEC126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9548E108181BF9B600AEC126 /* iOSplayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9548E100181BF9B600AEC126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9548E0D5181BF9B600AEC126 /* iOSplayer */;
+			targetProxy = 9548E0FF181BF9B600AEC126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9548E0E2181BF9B600AEC126 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9548E0E3181BF9B600AEC126 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9548E0EB181BF9B600AEC126 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9548E0EC181BF9B600AEC126 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		9548E0EE181BF9B600AEC126 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9548E0EF181BF9B600AEC126 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		9548E104181BF9B600AEC126 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9548E105181BF9B600AEC126 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9548E109181BF9B600AEC126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9548E10A181BF9B600AEC126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9548E10C181BF9B600AEC126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSplayer/iOSplayer-Prefix.pch";
+				INFOPLIST_FILE = "iOSplayer/iOSplayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9548E10D181BF9B600AEC126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSplayer/iOSplayer-Prefix.pch";
+				INFOPLIST_FILE = "iOSplayer/iOSplayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9548E10F181BF9B600AEC126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSplayer.app/iOSplayer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSplayer/iOSplayer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSplayerTests/iOSplayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9548E110181BF9B600AEC126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSplayer.app/iOSplayer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSplayer/iOSplayer-Prefix.pch";
+				INFOPLIST_FILE = "iOSplayerTests/iOSplayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9548E0D1181BF9B600AEC126 /* Build configuration list for PBXProject "iOSplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9548E109181BF9B600AEC126 /* Debug */,
+				9548E10A181BF9B600AEC126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9548E10B181BF9B600AEC126 /* Build configuration list for PBXNativeTarget "iOSplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9548E10C181BF9B600AEC126 /* Debug */,
+				9548E10D181BF9B600AEC126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9548E10E181BF9B600AEC126 /* Build configuration list for PBXNativeTarget "iOSplayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9548E10F181BF9B600AEC126 /* Debug */,
+				9548E110181BF9B600AEC126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9548E0CE181BF9B600AEC126 /* Project object */;
+}
