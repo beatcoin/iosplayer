@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface beatcoinAPI : NSObject
+@interface beatcoinAPI : NSObject <NSURLConnectionDelegate> {
+        NSMutableData *_responseData;
+}
 
-#define ENGINE_URL @"http://engine.beatcoin.org"
+#define ENGINE_URL @"http://ec2-54-229-112-27.eu-west-1.compute.amazonaws.com"
 
-+(NSNumber *) getPlay;
-//+(NSArray *) getPlay;
-+(NSString *) getPlayByName;
 
-+(void) postLibrary:(MPMediaItemCollection *)songs;
+-(NSNumber *) getPlay;
+-(NSString *) getPlayByName;
+-(void) postLibrary:(MPMediaItemCollection *)songs;
 
 @end

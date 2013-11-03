@@ -15,7 +15,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *addSongsButton;
 @property (weak, nonatomic) IBOutlet UITextField *playingLabel;
+@property (strong, nonatomic) beatcoinAPI * beatcoinAPI;
+
 @property BOOL playingASong;
+
+
+
 @end
 
 @implementation beatcoinViewController
@@ -23,6 +28,8 @@
 @synthesize musicPlayer;
 @synthesize playingLabel;
 @synthesize playingASong;
+@synthesize beatcoinAPI=_beatcoinAPI;
+
 
 - (void)viewDidLoad
 {
@@ -50,8 +57,10 @@
     MPMediaQuery *songQuery = [MPMediaQuery songsQuery];
     NSArray *songs = [songQuery items];
     MPMediaItemCollection *currentQueue = [[MPMediaItemCollection alloc] initWithItems:songs];
-    [beatcoinAPI postLibrary:currentQueue];
     
+    
+    _beatcoinAPI=[[beatcoinAPI alloc] init];
+    [_beatcoinAPI postLibrary:currentQueue];
     
 }
 
@@ -162,7 +171,7 @@
  
    // NSNumber * a=[beatcoinAPI getPlay];
     
-    NSString * a=[beatcoinAPI getPlayByName];
+    NSString * a=[_beatcoinAPI getPlayByName];
     
     if (a==nil) return;
     
@@ -243,9 +252,11 @@
 
 - (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
 {
+    /*
     if (mediaItemCollection) {
         [beatcoinAPI postLibrary:mediaItemCollection];
     }
+     */
     
     [self dismissModalViewControllerAnimated: YES];
 }
